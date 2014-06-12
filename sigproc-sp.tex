@@ -28,6 +28,7 @@
 \documentclass{acm_proc_article-sp}
 \usepackage[slovene]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{url}
 
 \begin{document}
 
@@ -129,7 +130,7 @@
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
 % number that will appear in the \additionalauthors section.
-\usepackage[slovenian]{babel}
+
 \maketitle
 \begin{abstract}
 Popularnost telefonije preko IP (VoIP) je v zadnjih letih narasla, ker je cenovno ugodnejša in enostavnejša za uporabo. Kakorkoli že, ta tehnologija je tudi atraktivna za kriminal, ker je VoIP globalna telefonska storitev, v kateri je težko identificirati uporabnika. Privlačna je tudi zaradi visoke varnosti, saj veliko implementacij uporablja močno enkripcijo za zaščito, tako zvočnih podatkov kot kontrolo samih sporočil v primerjavi z žično telefonijo kjer je prisluškovanje enostavnejše. Zato so za VoIP klice potrebni drugi načini pridobivanja digitalnih dokazov in informacij. V najini raziskavi smo pogledali kateri dokazi ostanejo po opravljenem VoIP klicu na obeh napravah, trdem disku in bralno-pisalnem pomnilniku (RAM).
@@ -144,14 +145,14 @@ Popularnost telefonije preko IP (VoIP) je v zadnjih letih narasla, ker je cenovn
 \keywords{Digitalna forenzika, dokazi, telefonija preko IP, VoIP, forenzika v pomnilniku} % NOT required for Proceedings
 
 \section{Uvod}
-Popularnost telefonije preko IP (VoIP) je v zadnjih letih narasla, ker je cenovno ugodnejša in enostavnejša za uporabo. Kakorkoli že, ta tehnologija je tudi atraktivna za kriminal, ker je VoIP globalna telefonska storitev, v kateri je težko identificirati uporabnika. Privlačna je tudi zaradi visoke varnosti, saj veliko implementacij uporablja močno enkripcijo za zaščito, tako zvočnih podatkov kot kontrolo samih sporočil v primerjavi z žično telefonijo kjer je prisluškovanje enostavnejše. Zato so za VoIP klice potrebni drugi načini pridobivanja digitalnih dokazov in informacij. V najini raziskavi smo pogledali kateri dokazi ostanejo po opravljenem VoIP klicu na obeh napravah, trdem disku in bralno-pisalnem pomnilniku (RAM).
+VoIP telefonija je tehnologija preko katere se prenaša večpredstavnostna vsebina po internetnem omrežju. Uporablja močno enkripcijo za zaščito, tako zvočnih podatkov kot kontrolo samih sporočil v primerjavi z žično telefonijo kjer je prisluškovanje enostavnejše. Zato so za VoIP klice potrebni drugi načini pridobivanja digitalnih dokazov in informacij. V najini raziskavi smo pogledali kateri dokazi ostanejo po opravljenem VoIP klicu na obeh napravah, trdem disku in bralno-pisalnem pomnilniku (RAM).
 
 Identifikacijske poverilnice so osnovane v informacijah iz glav paketov vsebovanih v VoIP protokolu. Narejeni so bili različni kontrolni testi v katerih je bila forenzična analiza narejena na virtualnih strojih s katerimi so bili opravljeni različni VoIP klici. Eksperimenti so bili ponovljeni na istem protokolu tako na disku kot v bralno pisalnem pomnilniku (RAM).
 
 \section{Paleta VoIP}
-Telefonija preko IP protokola je zelo spremenila način kako se podatki telefoniranja prenašajo in tako začela pravo telekomunikacijsko industrijo. S samo rastjo popularnosti in široko dostopnostjo do interneta je omogočeno, da se klici prenašajo preko internetne infrastrukture kot pa po tradicionalnem javno komutiranem telefonskem omrežju (PSTN). Ta tehnologija, ki se ji reče VoIP, uporablja internetni protokol (IP) za prenašanje paketov ki vsebujejo majhne koš\{č}ke glasovnega pogovora med klicočima.
+Telefonija preko IP protokola je zelo spremenila način kako se podatki telefoniranja prenašajo in tako začela pravo telekomunikacijsko industrijo. S samo rastjo popularnosti in široko dostopnostjo do interneta je omogočeno, da se klici prenašajo preko internetne infrastrukture kot pa po tradicionalnem javno komutiranem telefonskem omrežju (PSTN). Ta tehnologija, ki se ji reče VoIP, uporablja internetni protokol (IP) za prenašanje paketov ki vsebujejo majhne koš-čke glasovnega pogovora med klicočima.
 
-Popularnost VoIP je narasla zaradi cenejše in enostavnejše uporabo tako doma kot v podjetjih. Kakorkoli že, ta tehnologija je zelo privlačna za kriminalce, še posebej za VoIP pogovore ki niso spremljani iz strani internetnega ponudnika. To je zaradi tega ker je VoiP globalen telefonski servis v katerem je težko identificirati uporabnikovo identiteto, ker večina implementacij uporablja močno enkripcijo za zavaro\-vanje tako zvočnih podatkov kot kontrolo samih sporočil in nadziranje ali sledenje takšnih VoIP klicev je oteženo zaradi konvencionalnih metod kot so žično prisluškovanje in le teh ni mogoče aplicirati na VoIP klice. Zaradi teh razlogov so za pridobivanje podatkov in informacij iz telefonije preko IP potrebne druge metode. Bistveno za forenzične raziskovalce je, da imajo metodo ki omogoča organom pregona premagati nekatere vidike tega načina telefonije, ki so ugodne za storilce kaznivih dejanj.
+Popularnost VoIP je narasla zaradi cenejše in enostavnejše uporabo tako doma kot v podjetjih\cite{ORIG}. Kakorkoli že, ta tehnologija je zelo privlačna za kriminalce, še posebej za VoIP pogovore ki niso spremljani iz strani internetnega ponudnika. To je zaradi tega ker je VoiP globalen telefonski servis v katerem je težko identificirati uporabnikovo identiteto, ker večina implementacij uporablja močno enkripcijo za zavaro\-vanje tako zvočnih podatkov kot kontrolo samih sporočil in nadziranje ali sledenje takšnih VoIP klicev je oteženo zaradi konvencionalnih metod kot so žično prisluškovanje in le teh ni mogoče aplicirati na VoIP klice. Zaradi teh razlogov so za pridobivanje podatkov in informacij iz telefonije preko IP potrebne druge metode. Bistveno za forenzične raziskovalce je, da imajo metodo ki omogoča organom pregona premagati nekatere vidike tega načina telefonije, ki so ugodne za storilce kaznivih dejanj.
 
 Ta uvod podaja pregled transportnih protokolov VoIP in signalne protokole. Ti določajo podatke, iz katerih je mogoče forenzično pridobiti polja iz glave protokola, kot tudi uporabnikovo registracijo za VoIP klic.
 
@@ -161,7 +162,7 @@ Protokoli IP, UDP in RTP so protokoli ki enkapsulirajo in prenašajo pakete, ki 
 
 \subsection{Internet Protocol}
 
-Protokol IP je odgovoren za hranjenje internetnega naslova v glavi, kar omogoča paketom da so dostavljeni iz svojega izvora do IP naslova. Format glave protokola IP je prikazan na sliki~\ref{fig:ip}.
+Protokol IP\cite{IP} je odgovoren za hranjenje internetnega naslova v glavi, kar omogoča paketom da so dostavljeni iz svojega izvora do IP naslova. Format glave protokola IP je prikazan na sliki~\ref{fig:ip}.
 
 \begin{figure}
 \centering
@@ -172,7 +173,7 @@ Protokol IP je odgovoren za hranjenje internetnega naslova v glavi, kar omogoča
 
 
 \subsection{User Datagram Protocol}
-Zanesljiv protokol za prenos paketov po internetu je protokol TCP, ki zagotavlja dostavo tudi za izgubljene in pokvarjene pakete s ponovnim pošiljanjem. Vendar za VoIP klice, ki potekajo v realnem času, ni smisla ponovnega pošiljanja za izgubljene pakete. TCP uporablja nadzor pretoka, ki začasno zaustavi prenos paketov dokler pokvarjeni paket ni uspešno prenešen.
+Zanesljiv protokol za prenos paketov po internetu je protokol TCP\cite{TCP}, ki zagotavlja dostavo tudi za izgubljene in pokvarjene pakete s ponovnim pošiljanjem. Vendar za VoIP klice, ki potekajo v realnem času, ni smisla ponovnega pošiljanja za izgubljene pakete. TCP uporablja nadzor pretoka, ki začasno zaustavi prenos paketov dokler pokvarjeni paket ni uspešno prenešen.
 
 Namesto protokola TCP je za zahteve VoIP bolj primeren, čeprav je manj zanesljiv pri dostavi paketov, protokol UDP (slika~\ref{fig:udp}). Izbran sistem je tako sklad protokola IP/UDP. IP datagram zagotavlja izvorni in ciljni naslov in izvorna in ciljna vrata. Pogoste aplikacije delujejo na specifičnih vratih. Ker TCP zagotavlja prenos izgubljenih paketov, ni zaželjen v realnočasnih aplikacijah in je zato za prenos zvoka uporabljen UDP.
 
@@ -183,7 +184,7 @@ Namesto protokola TCP je za zahteve VoIP bolj primeren, čeprav je manj zaneslji
 \label{fig:udp}
 \end{figure}
 
-Protokol UDP se uporablja tudi zaradi lažjega prebijanja NAT-a pri uporabi načina prevajanje omrežnega naslova (angl. Network Address Translation, krat. NAT). Poznamo več vrst NAT (slika~\ref{fig:nat}) in sicer:
+Protokol UDP\cite{UDP} se uporablja tudi zaradi lažjega prebijanja NAT-a pri uporabi načina prevajanje omrežnega naslova (angl. Network Address Translation, krat. NAT). Poznamo več vrst NAT (slika~\ref{fig:nat}) in sicer:
 \begin{itemize}
   \item Direktna preslikava (angl. Full-cone) pri kateri se notranji lokalni IP naslov in vrata preslikajo v zunanji IP naslov z istimi vrati. Zunanji odjemalci lahko s pošiljanjem na začasni par (zunaj vidni IP naslov in vrata) pošiljajo sporočila notranjemu IP naslovu.
   \item Omejena direktna presilava (angl. Restricted cone): deluje na istem principu kot direktna preslikava z omejitvijo, da mora prvi paket poslati interni odjemalec.
@@ -201,7 +202,7 @@ Protokol UDP se uporablja tudi zaradi lažjega prebijanja NAT-a pri uporabi nač
 \label{fig:nat}
 \end{figure}
 
-NAT prebijamo z orodji za sprehajanje po takih omrežjih, ki jih imenujemo ''Obhod NAT-a'', (angl. Session Traversal Utilities for NAT, krat. STUN). Gre za tehniko, ki vzpostavi in vzdržuje IP povezave skozi NAT usmerjevalnike, ki kršijo povezavo iz enega konca na drugi (end-to-end). Uporablja se za peer-to-peer in VoIP povezave. Obstaja veliko metod za rešitev tega problema, vendar ne obstaja ena univerzalna. Metoda, pri kateri potrebujemo strežnik, se imenuje "relay" oz. posrednik. Pri takem načinu, potujejo paketi enega odjemalca najprej do strežnika, ki jih nato posreduje drugemu odjemalcu in obratno. Streznik mora biti naprava s katero lahko komunicirata oba odjemalca, ki sta v omrezju NAT. Veliko tehnik uporablja pomoč strežnika. Nekatere pa strežnik uporabljajo samo za vzpostavitev povezave. Če strežnik uporabljajo za celotno komunikacijo se s tem zniža kvaliteta povezave in poveča latenca. Druga tehnika je, da se dovoli požarnim zidovom in NAT omrežjem da dopuščajo VoIP, hkrati pa ohranjajo varnost podjetij. To določajo protokoli RSIP (realm-specific IP) in MIDCOM (middlebox communications).
+NAT prebijamo\cite{NAT-FIREWALL} z orodji za sprehajanje po takih omrežjih, ki jih imenujemo ''Obhod NAT-a'', (angl. Session Traversal Utilities for NAT, krat. STUN\cite{STUN}). Gre za tehniko, ki vzpostavi in vzdržuje IP povezave skozi NAT usmerjevalnike, ki kršijo povezavo iz enega konca na drugi (end-to-end). Uporablja se za peer-to-peer in VoIP povezave. Obstaja veliko metod za rešitev tega problema, vendar ne obstaja ena univerzalna. Metoda, pri kateri potrebujemo strežnik, se imenuje "relay" oz. posrednik. Pri takem načinu, potujejo paketi enega odjemalca najprej do strežnika, ki jih nato posreduje drugemu odjemalcu in obratno. Streznik mora biti naprava s katero lahko komunicirata oba odjemalca, ki sta v omrezju NAT. Veliko tehnik uporablja pomoč strežnika. Nekatere pa strežnik uporabljajo samo za vzpostavitev povezave. Če strežnik uporabljajo za celotno komunikacijo se s tem zniža kvaliteta povezave in poveča latenca. Druga tehnika je, da se dovoli požarnim zidovom in NAT omrežjem da dopuščajo VoIP, hkrati pa ohranjajo varnost podjetij. To določajo protokoli RSIP (realm-specific IP) in MIDCOM (middlebox communications).
 
 \subsection{Real-Time Transport Protocol}
 
@@ -216,14 +217,14 @@ Real-Time Transport Protocol (RTP) zagotavlja prometno omrežje za aplikacije v 
 
 Za vsak paket sta enolično določena časovna značka in sekv\-enčna številka. Sekvenčna številka se poveča z vsakim poslanim paketom in omogoča ponovno razvrstitev in detekcijo izgube paketov na prejemnikovi strani.
 
-Polje sinhronizacijski izvorni identifikator (SSRC) označuje izvor sinhronizacije, navadno z računalnikovo uro medtem ko polje doprinašani izvor (CSRC) označuje vir posameznih prispevkov, ki sestavljajo en podatkovni tok paketov. Za sodelovanje v VoIP klicu ni nujno uporabljati protokola RTP. Nekatere aplikacije VoIP kot je na primer Skype ne uporabljajo protokola RTP, medtem ko pa ga X-Lite in Ekiga uporabljajo. Prav zaradi tega smo naš eksperiment naredili na programu Ekiga saj imamo z dodatnim protokolom RTP, potem na voljo dodatna polja iz katerih lahko iščemo informacije o klicu.
+Polje sinhronizacijski izvorni identifikator (SSRC) označuje izvor sinhronizacije, navadno z računalnikovo uro medtem ko polje doprinašani izvor (CSRC) označuje vir posameznih prispevkov, ki sestavljajo en podatkovni tok paketov. Za sodelovanje v VoIP klicu ni nujno uporabljati protokola RTP. Nekatere aplikacije VoIP kot je na primer Skype ne uporabljajo protokola RTP, medtem ko pa ga X-Lite in Ekiga\cite{EKIGA} uporabljajo. Prav zaradi tega smo naš eksperiment naredili na programu Ekiga saj imamo z dodatnim protokolom RTP, potem na voljo dodatna polja iz katerih lahko iščemo informacije o klicu.
 
 Zvočni posnetek je razdeljen v paket ki je potem prenesen po omrežju. Če je paket prevelik in ga je potrebno fregmenitrati ali pa izvira iz različnih virov, potem bo imel vsak fragment enak CSRC za identifikacijo izvora iz istega podatkovnega toka. Različne sekvenčne števlike pa omogočajo rekonstrukcijo v pravem zaporedju za vsak CSRC. To je uporabljeno za sinhronizacijo na prejemnikovi strani.
 
 
 \subsection{SIP protocol}
 
-Protokol SIP omogoča klicanje uporabniških posrednikov (UA) za lokacijo in registracijo z uporabo proxy strežnikov, ki omogočajo drugim uporabniškim posrednikom priključitev v klicno sejo. Vsaka transakcija je sestavljena iz zahteve, ki sproži določeno metodo na vsaj en odgovor, kot je prikazano na sliki~\ref{fig:sip}. Jane uporablja svojo VoIP aplikacijo za pošiljanje zahteve Invite (vabilo) Joetu. Zahteva Invite je SIP metoda, ki določa akcije, ki jih Jane želi od Joeta, to je sprejetje klica. Zahteva Invite gre skozi dva proxy strežnika, da doseže Joeta (korak od 1 – 5). Na prejemnikovi strani se začne zvonjenje, odgovor pa Joe vrne pošiljatelju ponovno skozi oba proxy strežnika (korak 6 – 8). Joe potrdi prejetje zahtevka Invite z odgovorom OK osebi Jane (9 – 11). Prenos večpredstavnostne vsebine se začne ko Jane potrdi odgovora OK (12). Ta sejo lahko zaključi katerikoli udeleženec v komunikaciji (13 -14).
+Protokol SIP\cite{SIP} omogoča klicanje uporabniških posrednikov (UA) za lokacijo in registracijo z uporabo proxy strežnikov, ki omogočajo drugim uporabniškim posrednikom priključitev v klicno sejo. Vsaka transakcija je sestavljena iz zahteve, ki sproži določeno metodo na vsaj en odgovor, kot je prikazano na sliki~\ref{fig:sip}. Jane uporablja svojo VoIP aplikacijo za pošiljanje zahteve Invite (vabilo) Joetu. Zahteva Invite je SIP metoda, ki določa akcije, ki jih Jane želi od Joeta, to je sprejetje klica. Zahteva Invite gre skozi dva proxy strežnika, da doseže Joeta (korak od 1 – 5). Na prejemnikovi strani se začne zvonjenje, odgovor pa Joe vrne pošiljatelju ponovno skozi oba proxy strežnika (korak 6 – 8). Joe potrdi prejetje zahtevka Invite z odgovorom OK osebi Jane (9 – 11). Prenos večpredstavnostne vsebine se začne ko Jane potrdi odgovora OK (12). Ta sejo lahko zaključi katerikoli udeleženec v komunikaciji (13 -14).
 
 \begin{figure}
 \centering
@@ -252,9 +253,9 @@ Vrata, ki se navadno uporabljajo pri paleti protokolov VoIP so povzeta v tabeli~
 
 \subsection{Paleta protokolov H.323}
 
-Namesto protokola SIP se lahko za vzpostavitev seje, kontrolo nad sejo, prenos multimedijskih podatkov in kontrolo pasovne širine uporabi zbirka tehnologij H.323 (slika~\ref{fig:h323}). H.323 lahko po funkcionalnosti grobo primerjamo s protokolom SSL/TLS, a je precej obsežnejši. Protokol povezuje različne naprave (terminale, usmerjevalnike (angl. MCUs), prehode vratarje, in zaključne elemente).
+Namesto protokola SIP se lahko za vzpostavitev seje, kontrolo nad sejo, prenos multimedijskih podatkov in kontrolo pasovne širine uporabi zbirka tehnologij H.323 (slika~\ref{fig:h323}). H.323 \cite{H323} lahko po funkcionalnosti grobo primerjamo s protokolom SSL/TLS, a je precej obsežnejši. Protokol povezuje različne naprave (terminale, usmerjevalnike (angl. MCUs), prehode vratarje, in zaključne elemente).
 
-Terminali so naprave katere tipično uporablja končni uporabnik (telefoni, programski odjemalci, konferenčni sistemi ...). Usmerjevalniki povezujejo oziroma združujejo terminale ali skupino le-teh med seboj. Prehodi skrbijo za združljivost med različnimi tehnologijami, ki se uporabljajo pri povezovanju naprav (PTSN, ISDN). Vratarji niso obvezni za delovanje sistema skrbijo pa za registracijo končnih naprav, avtentikacijo uporabnikov, preslikavo naslovov, dovoljenja uporabnikov in/ali naprav. Vratarji med seboj uporabljajo protokol RAS (angl. Remote Access Service). Zaključni elementi prav tako niso potrebni, uporabljajo pa se za nadzor, upravljanje terminalov in vodenje računov znotraj upravljalske domene. Po analogiji spominjajo na naprave RAS\footnote{Ni enako kot prej omenjeni RAS (Registration, Admission and Status).} (angl. Remote Access Server).
+Terminali so naprave katere tipično uporablja končni uporabnik (telefoni, programski odjemalci, konferenčni sistemi ...). Usmerjevalniki povezujejo oziroma združujejo terminale ali skupino le-teh med seboj. Prehodi skrbijo za združljivost med različnimi tehnologijami, ki se uporabljajo pri povezovanju naprav (PTSN, ISDN). Vratarji niso obvezni za delovanje sistema skrbijo pa za registracijo končnih naprav, avtentikacijo uporabnikov, preslikavo naslovov, dovoljenja uporabnikov in/ali naprav. Vratarji med seboj uporabljajo protokol RAS (angl. Remote Access Service). Zaključni elementi prav tako niso potrebni, uporabljajo pa se za nadzor, upravljanje terminalov in vodenje računov znotraj upravljalske domene. Po analogiji spominjajo na naprave RAS\footnote{Ni enako kot prej omenjeni RAS (Registration, Admission and Status).} (angl. Remote Access Server) \cite{RAS}.
 
 \begin{figure}
 \centering
@@ -295,35 +296,35 @@ Faze pri vzpostavitvi klica pri protokolu H.323 (slika~\ref{fig:h323-call}).
 %++++++++++++++++++++++++++++++++++++++++++
 
 \subsection{Skype}
-VoIP aplikacija Skype je zelo popularna, vendar tudi predmet številnih forenzičnih raziskav, zaradi dobrih sposobnosti prečkanja NAT in zaobitja požarnega zida. Katerikoli Skype klient z nameščeno eno Skype aplikacijo na računalniku z namenom opravljanja VoIP klicev, lahko neželeno postane super vozlišče na Skype komunikacijski poti za vzdrževanje Skype omrežja, kar je še posebej riskantno za korporacije. Z analizo samo Skype prometa v njegovem komunikacijskem omrežju bi bilo mogoče zaznati Skype UDP vtičnike. To bi omogočalo blokiranje Skype prometa.
+VoIP aplikacija Skype je zelo popularna, vendar tudi predmet številnih forenzičnih raziskav, zaradi dobrih sposobnosti prečkanja NAT\cite{NAT} in zaobitja požarnega zida. Katerikoli Skype klient z nameščeno eno Skype aplikacijo na računalniku z namenom opravljanja VoIP klicev, lahko neželeno postane super vozlišče na Skype komunikacijski poti za vzdrževanje Skype omrežja, kar je še posebej riskantno za korporacije. Z analizo samo Skype prometa v njegovem komunikacijskem omrežju bi bilo mogoče zaznati Skype UDP vtičnike. To bi omogočalo blokiranje Skype prometa.
 
 \section{Težave tehnologije VoIP}
 
 Poleg že opisanih težav pri povezovanju naprav, ki so v omrežjih varovanimi s požarnim zidom in/ali povezane v medmrežje preko NAT-a.
 
 \subsection{Quality of service}
-Komunikacija prek IP omrežja je manj zanesljiva v primerjavi s standardnim PSTN telefonskim omrežjem, ker nima omrežnega mehanizma ki bi zagotavljal da se paketi ne izgubijo, in so dostavljeni v pravilnem vrstnem redu. VoIP telefonija se lahko sreča z raznovrstnimi problemi kot so latenca, izguba paketov in fazno trepetanje (jitter).
+Komunikacija prek IP omrežja je manj zanesljiva v primerjavi s standardnim PSTN telefonskim omrežjem, ker nima omrežnega mehanizma, ki bi zagotavljal da se paketi ne izgubijo in so dostavljeni v pravilnem vrstnem redu. VoIP telefonija se lahko sreča z raznovrstnimi problemi kot so latenca, izguba paketov in fazno trepetanje (jitter) \cite{QOS}.
 Usmerjevalniki običajno promet obdelujejo po FIFO vrstnem redu. Lahko se pa zgodi, da v usmerjevalnikih z veliko obremenitvijo, pride do presežka limita latence ki je dovoljena za VoIP. Ni mogoče nadzorovati, da bi se paketi dostavljali s fiksnim zamikom, saj le ti nastajajo z razdaljo, ki jo potrebujejo, da pridejo do cilja. To je še posebej opazno pri satelitskih omrežjih. En od načinov znižanja latence je z označevanjem zvočnih paketov, saj so občutljivi na časovne zamike, z metodo kot je DiffServ. Obstajajo tudi različni protokoli, ki definirajo specifikacije, za dobro kvaliteto VoIP klicev. Ti so RTCP, SIP, H.460.9, H.248.30 in MGCP.
 
 \subsection{Klic v sili}
-Standardno PSTN telefonsko omrežje je klasično telefonsko omrežje, ki ga vzdržuje telefonski ponudnik. S tem je tudi določena fizična lokacija. Ko je iz takega omrežja klicana ena izmed številk za klice v sili, je službi za pomoč takoj prikazana fizična lokacija klicatelja, ki jo imajo shranjeno v podatkovni bazi. Pri IP telefoniji take direktne povezave med fizično lokacijo in komunikacijo ni. Celo ponudnik fizične infrastrukture, kot je na primer ponudnik DSL, lahko ve le približno lokacijo naprave, ki je osnovana glede na IP naslov, saj nekateri ISP ponudniki samodejno ne beležijo, komu so bili dodeljeni avtomatski IP naslovi.
+Standardno PSTN telefonsko omrežje je klasično telefonsko omrežje, ki ga vzdržuje telefonski ponudnik. S tem je tudi določena fizična lokacija. Ko je iz takega omrežja klicana ena izmed številk za klice v sili, je službi za pomoč takoj prikazana fizična lokacija klicatelja, ki jo imajo shranjeno v podatkovni bazi. Pri IP telefoniji take direktne povezave med fizično lokacijo in komunikacijo ni \cite{PROBLEMS}. Celo ponudnik fizične infrastrukture, kot je na primer ponudnik DSL, lahko ve le približno lokacijo naprave, ki je osnovana glede na IP naslov, saj nekateri ISP ponudniki samodejno ne beležijo, komu so bili dodeljeni avtomatski IP naslovi.
 
 \subsection{Napajanje}
-Druga težava VoIP je, da zanjo potrebujemo električno napajanje. Tradicionalna telefonija je namreč priključena direktno na telefonskega ponudnika, kateri zagotavlja napajanje za analogno telefonijo. IP telefoni in VoIP telefonski adapterji so priključeni na usmerjevalnike ali na modeme. Kot rešitev obstajajo tudi modemi z vgrajeno baterijo ki zagotavljajo napajanje za nekaj ur. Tipično so to naprave ki lahko uporabljajo tudi analogno tehnologijo ali pa se povežejo na naš mobilni telefon. Ta težava je tudi povezana s prejšnjo saj v nujnih primerih, brez elektrike ne moremo poklicati nikogar, torej tudi telefonskih številk za klice v sili.
+Druga težava VoIP je, da zanjo potrebujemo električno napajanje \cite{PROBLEMS}. Tradicionalna telefonija je namreč priključena direktno na telefonskega ponudnika, kateri zagotavlja napajanje za analogno telefonijo. IP telefoni in VoIP telefonski adapterji so priključeni na usmerjevalnike ali na modeme. Kot rešitev obstajajo tudi modemi z vgrajeno baterijo ki zagotavljajo napajanje za nekaj ur. Tipično so to naprave ki lahko uporabljajo tudi analogno tehnologijo ali pa se povežejo na naš mobilni telefon. Ta težava je tudi povezana s prejšnjo saj v nujnih primerih, brez elektrike ne moremo poklicati nikogar, torej tudi telefonskih številk za klice v sili.
 
 \subsection{Varnost}
 VoIP je občutljiv na črve, viruse in vdore. Znani so DOS napadi, snemanje pogovora, kraja seje in nato uporaba plačljivih storitev, itd.
 
 \subsubsection{Oddaljeni napadi}
-Kolumbijski raziskovalci so pokazali, kaj lahko naredijo z vdorom v Cisco VoIP telefon. Hekerji torej lahko oddaljeno spremenijo telefon v navaden mikrofon in prisluškujejo iz kjerkoli. Cisco je globalno najbolj znan VoIP ponudnik, saj ima na milijone VoIP telefonov po svetu, tudi v podatkovno občutljivih podjetjih in vladah. Napravo thingp3wn3r so priključili v serijska vrata in nanj naložili zlonamerno kodo. S posebnim ukazom so dosegli da se je sistem zrušil in izpisal celoten pomnilnik. Z analizo pomnilnika so uspeli spremeniti program na telefonu, kateri je lahko okužil druge računalnike in naprave kot so, na primer tiskalniki. Lahko so dosegli, da telefon ves čas snema pogovore v prostoru tako, da uporabnik tega sploh ne zazna. Zanimivo je, da ima tak telefon tudi predsednik Obama.
+Kolumbijski raziskovalci so pokazali, kaj lahko naredijo z vdorom v Cisco VoIP telefon \cite{CISCO}. Hekerji torej lahko oddaljeno spremenijo telefon v navaden mikrofon in prisluškujejo iz kjerkoli. Cisco je globalno najbolj znan VoIP ponudnik, saj ima na milijone VoIP telefonov po svetu, tudi v podatkovno občutljivih podjetjih in vladah. Napravo thingp3wn3r so priključili v serijska vrata in nanj naložili zlonamerno kodo. S posebnim ukazom so dosegli da se je sistem zrušil in izpisal celoten pomnilnik. Z analizo pomnilnika so uspeli spremeniti program na telefonu, kateri je lahko okužil druge računalnike in naprave kot so, na primer tiskalniki. Lahko so dosegli, da telefon ves čas snema pogovore v prostoru tako, da uporabnik tega sploh ne zazna. Zanimivo je, da ima tak telefon tudi predsednik Obama \cite{OBAMA}.
 
 
 \subsection{Procesorska moč}
-Problem z VoIP je tudi, da so ti klici odvisni od posameznih računalnikov. V primeru da odpremo zahteven program med samim klicem se lahko procesor preobremeni in kvaliteta pogovora se zniža. V najslabšem primeru pa se lahko cel sistem sesuje. VoIP klici so torej v odvisnosti veliko napak, ki jih ima normalen računalnik.
+Problem z VoIP je tudi, da so ti klici odvisni od posameznih računalnikov \cite{PROBLEMS}. V primeru da odpremo zahteven program med samim klicem se lahko procesor preobremeni in kvaliteta pogovora se zniža. V najslabšem primeru pa se lahko cel sistem sesuje. VoIP klici so torej v odvisnosti veliko napak, ki jih ima normalen računalnik.
 
 
 \section{VoIP in forenzika}
-VoIP predstavlja paketno osnovano internetno tehnologijo za zvočno komunikacijo v primerjavi s tradicionalnim telefonskim omrejžem. To seveda vpliva na kazenski pregon saj prisluškovanje na žici ni več možno. Potrebna je nova arhitektura za zakonito prestrezanje prometa VoIP, vendar ker paketi potujejo po različnih poteh je njena implementacija težka. Možne subjekte prestrezanja lahko razdelimo na dve področji. Tiste ki pripadajo ponudniku internetnih storitev (ISP), in tiste, ki pripadajo LEA (Law Enforcement Agency), kateri se lahko nahajajo znotraj ISP ali zunaj njega. Subjekti povezani z ISP vključujejo signalizacijo, namestitev, vzdrževanje in zaključevanje IP klicev. Zbiranje podatkov IP zvočnega prometa je lahko realizirano na istem pod omre\{ž}ju kot je VoIP usmerjevalnik, kateri se poveže do obstoječe telefonske linije. Subjekti v povezavi z LEA lahko obstajajo znotraj ISP arhitekture vendar ostajajo pod nadzorom LEA saj zajeti podatki potrebujejo dovoljenje ISPja za dostop do dekripcijskih ključev.
+VoIP predstavlja paketno osnovano internetno tehnologijo za zvočno komunikacijo v primerjavi s tradicionalnim telefonskim omrejžem. To seveda vpliva na kazenski pregon saj prisluškovanje na žici ni več možno. Potrebna je nova arhitektura za zakonito prestrezanje prometa VoIP, vendar ker paketi potujejo po različnih poteh je njena implementacija težka. Možne subjekte prestrezanja lahko razdelimo na dve področji. Tiste ki pripadajo ponudniku internetnih storitev (ISP), in tiste, ki pripadajo LEA (Law Enforcement Agency), kateri se lahko nahajajo znotraj ISP ali zunaj njega. Subjekti povezani z ISP vključujejo signalizacijo, namestitev, vzdrževanje in zaključevanje IP klicev. Zbiranje podatkov IP zvočnega prometa je lahko realizirano na istem pod omre-žju kot je VoIP usmerjevalnik, kateri se poveže do obstoječe telefonske linije. Subjekti v povezavi z LEA lahko obstajajo znotraj ISP arhitekture vendar ostajajo pod nadzorom LEA saj zajeti podatki potrebujejo dovoljenje ISPja za dostop do dekripcijskih ključev.
 
 Bolj kot je omrežje centralizirano, bolj enostavno je zakonito prestrezanje. Na žalost ne obstaja ena sama naprava, ki bi prestrezala ves VoIP promet ampak je celo značilna visoka stopnja decentralizacije, zlasti za mobilne uporabnike, ki se povezujejo na internet za krajša časovna obdobja. To lahko povzroči premik izven dosega vozlišča nadzorovanega pod vodstvom organov pregona kjer je prestrezanje zahtevano od internetnih ponudnikov. Na primer, Skype uporablja dobro enkripcijo glede na objavljene standarde (DES in AES). To od LEA zahteva pridobitev ključev od podjetja Skype v primeru, če potrebujejo dekripcijo zajetih podatkov VoIP.
 
@@ -342,7 +343,7 @@ Pregled in analiza zajetega pomnilnika se izvajata v načinu samo za branje, kar
 
 \section{Eksperimenti}
 
-Cilj eksperimenta je ugotoviti, ali se kakršnakoli informacija o klicu shrani oziroma ohrani na trdem disku in/ali pomnilniku naprave iz katere je bil narejen klic. Pri ponovitvi eksperimentov smo upoštevali strukturo in vlogo naprav, kot je predstavljeno v članku in povzeto v sliki~\ref{fig:setup}. Predhodno smo se registrirali in pridobili naslov SIP pri ponudniku VoIP storitev Ekiga. Naprava s katero kličemo uporablja 32-bitni operacijski sistem Debian, temelji na jedru Linux in osnovnimi programi za upravljanje operacijskega sistema GNU. Na napravi uporabljamo VoIP odjemalec Ekiga. Za testni klic smo poklicali kar "Echo test" odzivnik in počakali 30 sekund, nato pa klic prekinili. Promet zajemamo zunaj govorečih naprav, v usmerjevalniku katerega poganja strojna programska oprema OpenWRT, s programom tcpdump (ukaz~\ref{fig:tcpdump}). Zajet promet analiziramo s programom wireshark. Promet je zaradi poenostavitve in lažje analize nekriptiran.
+Cilj eksperimenta je ugotoviti, ali se kakršnakoli informacija o klicu shrani oziroma ohrani na trdem disku in/ali pomnilniku naprave iz katere je bil narejen klic\cite{RECONSTRUCTION}. Pri ponovitvi eksperimentov smo upoštevali strukturo in vlogo naprav, kot je predstavljeno v članku in povzeto v sliki~\ref{fig:setup}. Predhodno smo se registrirali in pridobili naslov SIP pri ponudniku VoIP storitev Ekiga. Naprava s katero kličemo uporablja 32-bitni operacijski sistem Debian, temelji na jedru Linux in osnovnimi programi za upravljanje operacijskega sistema GNU. Na napravi uporabljamo VoIP odjemalec Ekiga. Za testni klic smo poklicali kar "Echo test" odzivnik in počakali 30 sekund, nato pa klic prekinili. Promet zajemamo zunaj govorečih naprav, v usmerjevalniku katerega poganja strojna programska oprema OpenWRT, s programom tcpdump (ukaz~\ref{fig:tcpdump}). Zajet promet analiziramo s programom wireshark. Promet je zaradi poenostavitve in lažje analize nekriptiran.
 
 \begin{figure}
 \centering
@@ -611,10 +612,13 @@ Za forenziko na področju protokola VoIP velja, da je to še precej nerazvito po
 % The following two commands are all you need in the
 % initial runs of your .tex file to
 % produce the bibliography for the citations in your paper.
+\bibliography{sigproc-sp}  % sigproc-sp.bib is the name of the Bibliography in this case
 \bibliographystyle{abbrv}
-\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
 
-\section{Literatura}
+%QOS \url{"http://en.wikipedia.org/wiki/Voice_over_IP#Quality_of_service"}
+%NAT \url{"http://en.wikipedia.org/wiki/NAT_traversal"}
+%TEŽAVE \url{"http://computer.howstuffworks.com/ip-telephony5.htm"}
+%OBAMA \url{"http://geeknizer.com/hack-any-cisco-voip-phone/"}
 
 %RAS https://en.wikipedia.org/wiki/Registration,_Admission_and_Status
 %H.261 https://en.wikipedia.org/wiki/H.261
