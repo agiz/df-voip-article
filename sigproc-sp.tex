@@ -384,7 +384,8 @@ Za potrebe seminarske naloge smo napisali skripto v programskem jeziku python, k
 
 \subsection{Eksperiment 1}
 
-Po opravljenem klicu zajamemo podatke na disku (ukaz~\ref{fig:dd}).
+Naša hipoteza je, da bomo na disku odjemalca našli podatke, ki bodo enolično določili klic med vsemi podatki zajetimi na usmerjevalniku. Po opravljenem klicu zajamemo podatke na disku (ukaz~\ref{fig:dd}).
+
 \begin{figure}
 \centering
 \begin{verbatim}
@@ -394,11 +395,11 @@ dd if=/dev/sda of=/mnt/storage/debian.img
 \label{fig:dd}
 \end{figure}
 
-Na disku nismo našli nobenih sledi klica.
+Na disku nismo našli nobenih sledi, tj. delcev paketov, ki bi lahko predstavljali podatke klica.
 
 \subsection{Eksperiment 2}
 
-Za zajem pomnilnika smo najprej namestili modul fmem, da lahko zajamemo celotno pomnilniško sliko (ukaz~\ref{fig:fmem}).
+V tem eksperimentu pričakujemo, da se bodo podatki, ki enolično določajo klic nahajali v pomnilniškem prostoru odjemalca. Za zajem pomnilnika smo najprej namestili modul fmem, da lahko zajamemo celotno pomnilniško sliko (ukaz~\ref{fig:fmem}).
 
 \begin{figure}
 \centering
@@ -409,7 +410,14 @@ dd if=/dev/fmem of=debian_mem.bin bs=1024
 \label{fig:fmem}
 \end{figure}
 
-Z našo skripto smo na različnih lokacijah našli niz ''Call-ID'', kar je dovolj za identifikacijo klica. Našli smo tudi en paket identičen tistemu, ki je bil zajet na usmerjevalniku.
+Z našo skripto smo na različnih lokacijah našli niz ''Call-ID'' (slika~\ref{fig:eks2}), kar je dovolj za identifikacijo klica. Našli smo tudi en paket identičen tistemu, ki je bil zajet na usmerjevalniku.
+
+\begin{figure}
+\centering
+\psfig{file=semi_slike/experiment-2.eps, width=3in,} % height=1in, width=1in,}
+\caption{Del pomnilniške slike, kjer smo našli vrednost ''Call-ID''.}
+\label{fig:eks2}
+\end{figure}
 
 % \subsection{Tables}
 % Because tables cannot be split across pages, the best
